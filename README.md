@@ -3,3 +3,7 @@
 Small state transitions for form validation and change tracking.
 
 Run `node test.js` from this folder.
+
+## required
+
+Require a nonblank string. A number is not silently coerced into a title.
