@@ -10,4 +10,10 @@ function changedKeys(original, current) {
   return Array.from(new Set(Object.keys(original).concat(Object.keys(current)))).filter(function (key) { return original[key] !== current[key]; });
 }
 
-module.exports = { required: required, integerInRange: integerInRange, changedKeys: changedKeys };
+function validateTitle(value, maximum) {
+  if (!required(value)) return "Title is required";
+  if (Array.from(value.trim()).length > maximum) return "Title is too long";
+  return null;
+}
+
+module.exports = { required: required, integerInRange: integerInRange, changedKeys: changedKeys, validateTitle: validateTitle };

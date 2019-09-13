@@ -11,3 +11,11 @@ Require a nonblank string. A number is not silently coerced into a title.
 ## integerInRange
 
 Both bounds are inclusive. Convert and validate string input before calling.
+
+## changedKeys
+
+Compare shallow property values. Missing and explicitly undefined properties compare equally.
+
+## validateTitle
+
+Return the first validation message, or null. Length is measured in Unicode code points after trimming.
